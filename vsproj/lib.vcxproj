@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B4242804-E171-4C3A-9B17-3AF4290A62BD}</ProjectGuid>
+    <RootNamespace>lib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25420.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <IncludePath>E:\GitRepo\oglsc\SDL2-2.0.10\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>B:\libs\SDL-1.2.15\include;../include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>./;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>B:\libs\SDL-1.2.15\include;../include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>B:\libs\SDL-1.2.15\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lib\array.c" />
+    <ClCompile Include="..\lib\bitblt.c" />
+    <ClCompile Include="..\lib\bitmap.c" />
+    <ClCompile Include="..\lib\context.c" />
+    <ClCompile Include="..\lib\frag.c" />
+    <ClCompile Include="..\lib\fragproc.c" />
+    <ClCompile Include="..\lib\frame.c" />
+    <ClCompile Include="..\lib\gl.c" />
+    <ClCompile Include="..\lib\hash.c" />
+    <ClCompile Include="..\lib\image.c" />
+    <ClCompile Include="..\lib\light.c" />
+    <ClCompile Include="..\lib\list.c" />
+    <ClCompile Include="..\lib\matrix.c" />
+    <ClCompile Include="..\lib\platform.c" />
+    <ClCompile Include="..\lib\raster.c" />
+    <ClCompile Include="..\lib\rasterln.c" />
+    <ClCompile Include="..\lib\rasterpg.c" />
+    <ClCompile Include="..\lib\rasterpt.c" />
+    <ClCompile Include="..\lib\render.c" />
+    <ClCompile Include="..\lib\tex.c" />
+    <ClCompile Include="..\lib\texenv.c" />
+    <ClCompile Include="..\lib\texunit.c" />
+    <ClCompile Include="..\lib\util.c" />
+    <ClCompile Include="..\lib\vgl.c" />
+    <ClCompile Include="..\lib\vglsdl.c" />
+    <ClCompile Include="libslibs.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lib\command.h" />
+    <ClInclude Include="..\lib\common.h" />
+    <ClInclude Include="..\lib\config.h" />
+    <ClInclude Include="..\lib\context.h" />
+    <ClInclude Include="..\lib\dispatch.h" />
+    <ClInclude Include="..\lib\exec.h" />
+    <ClInclude Include="..\lib\frame.h" />
+    <ClInclude Include="..\lib\glint.h" />
+    <ClInclude Include="..\lib\hash.h" />
+    <ClInclude Include="..\lib\image.h" />
+    <ClInclude Include="..\lib\library.h" />
+    <ClInclude Include="..\lib\matrix.h" />
+    <ClInclude Include="..\lib\platform.h" />
+    <ClInclude Include="..\lib\raster.h" />
+    <ClInclude Include="..\lib\system.h" />
+    <ClInclude Include="..\lib\tex.h" />
+    <ClInclude Include="..\lib\texunit.h" />
+    <ClInclude Include="..\lib\util.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
