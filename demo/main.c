@@ -230,7 +230,7 @@ int main(int argc, char* argv[])
 		i++;
 	}
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-	/* glutInitWindowPosition(200,200); */
+	// glutInitWindowPosition(200,200); 
 	if(caveMode!=1)
 	{
 		glutInitWindowSize(width*3,height*2);
@@ -259,6 +259,7 @@ int main(int argc, char* argv[])
 }
 #endif
 
+
 void init() {
 	InitializeRoller(trackName,intro,width,height,0,caveMode,viewAngle,eyeDist,focalLength);
 }
@@ -271,7 +272,14 @@ int main(int argc, char* argv[])
 	atexit(SDL_Quit);
 	vglInitialize();
 
-	sdlSurface = SDL_SetVideoMode(width, height, 0, SDL_ANYFORMAT);
+	//sdlSurface = SDL_SetVideoMode(width, height, 0, SDL_ANYFORMAT); //SDL1.2
+
+	/*sdlSurface = (SDL_Surface*)SDL_CreateWindow("My Game Window",
+		SDL_WINDOWPOS_CENTERED,
+		SDL_WINDOWPOS_CENTERED,
+		width, height,
+		SDL_WINDOW_FULLSCREEN | SDL_WINDOW_OPENGL);
+*/
 	glSurface = vglCreateSurface(width, height, GL_RGBA, GL_UNSIGNED_INT_8_8_8_8_REV, 0);
 	vglMakeCurrent(glSurface, glSurface);
 
