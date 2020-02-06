@@ -43,7 +43,7 @@ ignored. Comments can appear anywhere in the file.
 The following paragraphs explain the meaning and contents of each section
 type:
 
-§ The Track section
+?The Track section
 ===================
 A track section begins with a line containing the section name: Track. The
 next line contains a positive integer which is the number of control points
@@ -62,7 +62,7 @@ The curve runs through all control points, in the order they are given. The
 curve is automatically closed, that is to say the last control point is
 automatically linked to the first.
 
-§ The SupportCoordinate section
+?The SupportCoordinate section
 ===============================
 A SupportCoordinate section begins with a line containing the section name:
 SupportCoordinate. The next line contains a positive integer which is the
@@ -87,7 +87,7 @@ If th z coord is positive, then it represents the exact support height. This
 can be used to create really high pillars. In this case, a board (with
 rollercoaster 2000 logo) is attached at the top of the support.
 
-§ The SupportAbscisse section
+?The SupportAbscisse section
 =============================
 This section provides with a different way of defining support. A
 SupportAbscisse section begins with a line containing the section name:
@@ -100,7 +100,7 @@ starts from the first control point. So those lines are represented by their
 abscisse (or index). A support is placed at the beginning of a corresponding
 line, given by its abscisse.
 
-§ The Box section
+?The Box section
 =================
 A Box section begins with a line containing the section name: Box. The object
 described in this section is the great metal box that lies on the ground,
@@ -111,7 +111,7 @@ number, which is the box length. The next line must contain a single number
 which is the box's rotation angle around an upward vector placed on the center
 of the box.
 
-§ The StartSegment section
+?The StartSegment section
 ==========================
 A StartSegment section begins with a line containing the section name:
 StartSegment. The following line must contain an integer. This integer is the
@@ -125,7 +125,7 @@ After the first ride, train starts from where it stopped.
 If there is no StartSegment section in the track file, the default value for
 the StartSegment is -5.
 
-§ The BrakeSegment section
+?The BrakeSegment section
 ==========================
 A BrakeSegment section begins with a line containing the section name:
 BrakeSegment. The following line must contain an integer. This integer is the
@@ -137,7 +137,7 @@ from the last segment of the track).
 If there is no BrakeSegment section in the track file, the default value for
 the BrakeSegment is -20.
 
-§ The TiltFactor section
+?The TiltFactor section
 ========================
 A TiltFactor section begins with a line containing the section name:
 TiltFactor. The following line must contain a number. This factor control the
@@ -145,14 +145,14 @@ amount of banking of track at bends (height of cant of outer rail at curve).
 
 If there is no TiltFactor section in the track file, the default value is 5.0
 
-§ The Tree section
+?The Tree section
 ==================
 A Tree section begins with a line containing the section name: Tree. The next
 line must contain a positive integer, which is the number of trees. Each
 following line contains the 3D coordinate for one tree. The z coordinate has
 no effect, so you can make it null, or whatever you want.
 
-§ The AverageSegmentLength section
+?The AverageSegmentLength section
 ==================================
 A AverageSegmentLength section begins with a line containing the section name:
 AverageSegmentLength. The next line must contain a number. This number is the
