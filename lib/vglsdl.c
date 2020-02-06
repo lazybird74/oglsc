@@ -176,7 +176,7 @@ GLAPI GLboolean APIENTRY vglSwapBuffers(SDL_Surface * display, VGL_Surface surfa
 {
 	SdlSurfaceWrapper *wrapper = (SdlSurfaceWrapper *) surface;
 
-	if (!SDL_BlitSurface(wrapper->sdlSurface, NULL, display, NULL) && !SDL_Flip(display)) {
+	if (!SDL_BlitSurface(wrapper->sdlSurface, NULL, display, NULL)/* && !SDL_Flip(display)*/) {
 		return GL_TRUE;
 	} else {
 		return GL_FALSE;
