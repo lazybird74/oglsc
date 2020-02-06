@@ -36,6 +36,7 @@
 #endif
 
 
+
 int GetRightShiftCount(DWORD dwVal);
 int GetNumSet(DWORD dwVal);
 int Scale8(int colorValue, int colorBits);
