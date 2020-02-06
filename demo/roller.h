@@ -19,7 +19,7 @@
 
 #ifndef _ROLLER_HEADER
 #define _ROLLER_HEADER
-
+#pragma comment(lib,"msvcrt.lib")
 #include "point.h"
 
 #define ROLLER_NOERROR 0
