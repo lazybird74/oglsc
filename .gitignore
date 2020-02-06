@@ -1,2 +1,17 @@
 
 *.obj
+*.idb
+*.lib
+*.log
+*.tlog
+*.tga
+*.trk
+*.cache
+*.exp
+*.dll
+*.pdb
+*.filters
+*.user
+*.txt
+*.ilk
+*.htm
