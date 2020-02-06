@@ -107,7 +107,7 @@ void calc_coul(int nb, point* r, point* amb, point* dif, point* lig, point* norm
 
 
 // p est un point de la trajectoire
-// v est la tangente à la trajectoire en ce point
+// v est la tangente ?la trajectoire en ce point
 void create_poteau(point* p1, point* p2, point* v, point* buf, point* bufc){
 	point a,b;
 	int i;
